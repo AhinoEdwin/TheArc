@@ -91,6 +91,10 @@ label #cancel{
 nav ul li a{
   font-size: 17px;
 }
+button:not(:disabled){
+cursor: pointer;
+    height: 50%;
+}
 }
 
 @media(max-width:860px){
@@ -125,7 +129,7 @@ nav ul li a{
 
   .logo{
     max-height: 10%;
-    max-width: 10%;
+    max-width: 15%;
   }
   .navbar{
     background-color: #10000E;
@@ -140,6 +144,15 @@ nav ul li a{
     background-color:  #BA9043;
     color:white;
   }
+@media (max-width: 768px) {
+  .navbar{
+    background-color: #10000E;
+  }
+  .mobNav{
+    display: flex;
+  }
+}
+
   @media (min-width: 768px) {
     .navbar-nav li {
       margin-left: 2rem; /* Adds margin to the left of each list item on screens larger than 768px */

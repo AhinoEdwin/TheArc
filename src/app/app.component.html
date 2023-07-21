@@ -1,27 +1,28 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-  <a class="navbar-brand" href="#"><img class="logo"src="./assets/Logo only.png" alt=""></a>
-  <div class="ml-auto mt-auto">
-  <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-duration="500">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</div>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto ml-auto w-100">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#myCarousel">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#service">Services</a>
-      </li>
-      <li class="nav-item contact">
-        <a class="nav-link contact-link" href="/contact">Contact</a>
-      </li>
-    </ul>
+  <div class="ml-auto mt-auto mobNav">
+    <div> <a class="navbar-brand" href="#"><img class="logo"src="./assets/Logo only.png" alt=""></a></div>
+     <button class="navbar-toggler  navbar-light bg-light" type="button" (click)="toggleNavbarCollapse()" [attr.aria-expanded]="isCollapsed ? 'false' : 'true'"
+      aria-controls="navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
+    <!-- The collapsible menu items -->
+    <div class="collapse navbar-collapse" [ngClass]="{'show': !isCollapsed}" id="navbarNav">
+      <ul class="navbar-nav mr-auto ml-auto w-100">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="onNavItemClicked()" href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onNavItemClicked()" href="#service">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onNavItemClicked()" href="#carouselExample">Members</a>
+        </li>
+        <li class="nav-item contact">
+          <a class="nav-link contact-link" (click)="onNavItemClicked()" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
 </nav>
 
 
@@ -34,7 +35,7 @@
   <div class="footer-container">
     <div class="top">
       <div class="top-icons">
-        <a *ngFor="let item of footerItems" href="{{ item.url }}" style="padding-left: 5%;">
+        <a *ngFor="let item of footerItems" href="{{ item.url }}" style="padding-left: 5%;" target="_blank">
           <img src="{{ item.imagePath }}" alt="{{ item.name }} icon" />
         </a>
       </div>
@@ -43,7 +44,7 @@
       <div class="content1">
         <h2>Contact</h2>
         <div *ngFor="let item of contact" class="contact-icon">
-          <a href="{{ item.url }}">
+          <a href="{{ item.url }}" target="_blank">
             <img src="{{ item.imagePath }}" alt="{{ item.name }} icon" />
           </a>
           <div class="contact-message">
@@ -54,7 +55,7 @@
       <div class="content1">
         <h2>Office</h2>
         <div class="contact-icon">
-          <a href="{{ location[0].url }}">
+          <a href="{{ location[0].url }}" target="_blank">
             <img src="{{ location[0].imagePath }}" alt="{{ location[0].name }} icon" />
           </a>
           <div class="contact-message">
@@ -63,9 +64,12 @@
         </div>
       </div>
     </div>
-    <div class="content2">
-      <h2>&copy; 2023 Anupama Recording Company. All rights reserved.</h2>
+    <div class="content2" style="width: 98%;;">
       <h2 style="text-align: center;">GSTIN: 09AERPN4483P1ZD</h2>
+      <div class="trademark" style="display: flex;justify-content: space-between;width: 98%;">
+      <div>  <h2>&copy; 2023 Anupama Recording Company. All rights reserved.</h2></div>
+       <div> <span>Designed & Developed by TriuneD</span></div>
+      </div>
     </div>
   </div>
 </footer>

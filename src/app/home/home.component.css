@@ -4,7 +4,7 @@
   padding-left: 5%;
   width:80%;
   text-align: justify;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .text{
   font-size: x-large;
@@ -19,9 +19,12 @@
 }
 
 .sample{
-  padding: 10%;
-display: flex;
-flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
 }
 
 .imgtag{
@@ -37,7 +40,7 @@ flex-direction: row;
   width: auto;
 }
 .name{
-  font-size: 40px;
+  font-size: 25px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: black;
   font-weight: bold;
@@ -57,6 +60,18 @@ flex-direction: row;
     padding-bottom: 5%;
 }
 
+@media (min-width: 767px) {
+  .carousel-caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15%;
+  }
+  .members{
+    background-color:rgba(0, 0, 0, 0.7);
+  }
+}
 .carousel-caption{
   display: flex;
   justify-content: center;
@@ -93,7 +108,7 @@ flex-direction: row;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 105%
   }
 
   .carousel-item {
@@ -135,6 +150,9 @@ flex-direction: row;
 }
 
 @media (min-width: 768px) {
+  .carousel-inner{
+    height: 100vh;
+  }
   #certificateCarousel{
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -148,8 +166,23 @@ flex-direction: row;
 }
 
 /* cards */
-.container {
-  margin-top: 20px;
+@media (max-width: 768px) {
+  .servicehead h1{
+  font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: self-end;
+  }
+}
+
+.container1 {
+  padding-bottom: 2%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
 }
 
 .row {
@@ -193,13 +226,57 @@ flex-direction: row;
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
 .servicehead h1 {
   font-size: 35px;
   font-weight: bold;
   color: #333;
-  height: 101px;
+  height: 70px;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: self-end;
+}
+}
+
+/* contact */
+.container {
+  max-width: 600px;
+  margin-top: 5%;
+  padding-top: 2%;
+  border-radius: 5%;
+  /* border-radius: 10% 22% 30% 40%; */
+  background-color: rgba(54, 56, 58, 0.81);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  height: 105vh;
+}
+
+.fontlabel {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-control-lg {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 14px;
+}
+
+.submit {
+  width: 100%;
+}
+.main{
+  background-image: url("forms.jpeg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

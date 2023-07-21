@@ -1,9 +1,9 @@
 <!-- banner carousel -->
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="0"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item">
@@ -31,10 +31,12 @@
 
 <!-- cards service  -->
 
-<div class="container" id="service">
-  <div class="servicehead"><h1>Services We Provide</h1></div>
+<div class="container1" id="service">
+  <div class="servicehead">
+    <h1>Services We Provide</h1>
+  </div>
   <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 p-2" *ngFor="let title of titles">
+    <div class="col-lg-4 col-6 col-sm-6 p-2" *ngFor="let title of titles">
       <div class="cardservice">
         <div class="card-body">
           <h5 class="card-title">{{ title }}</h5>
@@ -84,20 +86,22 @@
 
 <!-- artist carousel -->
 
-<div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="10000">
-  <div class="servicehead"><h1>Members At ARC</h1></div>
+<div id="carouselExample" class="carousel slide members" data-ride="carousel" data-interval="5000">
+  <div class="servicehead"><h1 style="color: white;">Members At ARC</h1></div>
 
   <ol class="carousel-indicators">
     <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExample" data-slide-to="1"></li>
+    <li data-target="#carouselExample" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="sample">
         <div class="card">
           <div class="imgtag col-md-4 col-sm-12">
-            <img src="./assets/Person 1.jpeg" alt="">
+            <img src="./assets/Person 1.jpeg" alt="" style="max-width: 80%;">
             <span class="name">Fahmil Khan</span>
+            <span style="color: black;text-align: center;">(Dubai,UAE)</span>
           </div>
           <div class="memcontent col-md-8 col-sm-12">
             <span class="name">Artist</span>
@@ -114,11 +118,29 @@
           <div class="imgtag col-md-4 col-sm-12">
             <img src="./assets/person 2.jpeg" alt="">
             <span class="name">Antonio Francisco</span>
+            <span style="color: black;text-align: center;">(London,UK)</span>
           </div>
           <div class="memcontent col-md-8 col-sm-12">
             <span class="name">Artist</span>
             <div class="text">
               {{antonio}}
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="carousel-item">
+      <div class="sample">
+        <div class="card">
+          <div class="imgtag col-md-4 col-sm-12">
+            <img src="./assets/person 3.jpeg" alt="">
+            <span class="name">Aashirwad</span>
+            <span style="color: black;text-align: center;">(Indore,India)</span>
+          </div>
+          <div class="memcontent col-md-8 col-sm-12">
+            <span class="name">Artist</span>
+            <div class="text">
+              {{Aashirwad}}
             </div>
           </div>
         </div>
@@ -134,5 +156,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
