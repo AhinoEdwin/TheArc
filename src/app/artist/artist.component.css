@@ -1,0 +1,31 @@
+.artist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#BA9043;
+    background-image: url("forms.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media(min-width: 768px)  {
+.artist h1{
+    text-align: center;
+    /* height: 15%;
+    width: 40%; */
+    font-size: 100px;
+    /* background-color: rgba(54, 56, 58, 0.81); */
+
+}
+}
+@media(max-width: 768px)  {
+    .artist h1{
+        text-align: center;
+        background-color: rgba(54, 56, 58, 0.81);
+    }
+    }

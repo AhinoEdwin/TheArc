@@ -18,8 +18,11 @@
         <li class="nav-item">
           <a class="nav-link" (click)="onNavItemClicked()" href="#carouselExample">Members</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onNavItemClicked()" routerLink="/artist">Artist</a>
+        </li>
         <li class="nav-item contact">
-          <a class="nav-link contact-link" (click)="onNavItemClicked()" routerLink="/contact">Contact</a>
+          <a class="nav-link contact-link" (click)="onNavItemClicked()" routerLink="/contact">Register</a>
         </li>
       </ul>
     </div>
@@ -35,29 +38,33 @@
   <div class="footer-container">
     <div class="top">
       <div class="top-icons">
-        <a *ngFor="let item of footerItems" href="{{ item.url }}" style="padding-left: 5%;" target="_blank">
+        <a *ngFor="let item of footerItems" href="{{ item.url }}" target="_blank">
           <img src="{{ item.imagePath }}" alt="{{ item.name }} icon" />
         </a>
       </div>
     </div>
     <div class="bottom">
       <div class="content1">
-        <h2>Contact</h2>
+        <div *ngFor="let item of contact" style="display: flex;justify-content: center;">
+        <a href="{{ item.url }}" target="_blank">
+          <img src="{{ item.imagePath }}" alt="{{ item.name }} icon" />
+        </a>
+        <h2 style="padding: 1%;">Contact</h2>
+      </div>
         <div *ngFor="let item of contact" class="contact-icon">
-          <a href="{{ item.url }}" target="_blank">
-            <img src="{{ item.imagePath }}" alt="{{ item.name }} icon" />
-          </a>
           <div class="contact-message">
             <span>{{ item.message }}</span>
           </div>
         </div>
       </div>
       <div class="content1">
-        <h2>Office</h2>
-        <div class="contact-icon">
+        <div style="display: flex;justify-content: center;">
           <a href="{{ location[0].url }}" target="_blank">
             <img src="{{ location[0].imagePath }}" alt="{{ location[0].name }} icon" />
           </a>
+        <h2 style="padding: 1%;">Office</h2>
+      </div>
+        <div class="contact-icon">
           <div class="contact-message">
             <span>{{ location[0].message }}</span>
           </div>
@@ -66,7 +73,7 @@
     </div>
     <div class="content2" style="width: 98%;;">
       <h2 style="text-align: center;">GSTIN: 09AERPN4483P1ZD</h2>
-      <div class="trademark" style="display: flex;justify-content: space-between;width: 98%;">
+      <div class="trademark">
       <div>  <h2>&copy; 2023 Anupama Recording Company. All rights reserved.</h2></div>
        <div> <span>Designed & Developed by TriuneD</span></div>
       </div>

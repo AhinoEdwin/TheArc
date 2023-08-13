@@ -5,11 +5,9 @@
     margin-top: 5%;
     padding-top: 2%;
     border-radius: 5%;
-    /* border-radius: 10% 22% 30% 40%; */
     background-color: rgba(54, 56, 58, 0.81);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: white;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -37,7 +35,7 @@
     background-image: url("forms.jpeg");
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 120vh;
+    height: 165vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +54,7 @@
       background-color: rgba(54, 56, 58, 0.81);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       color: white;
-      height: 100vh;
+      height: 165vh;
       display: flex;
       flex-wrap: wrap;
     }
@@ -83,7 +81,7 @@
       background-image: url("forms.jpeg");
       background-repeat: no-repeat; 
       background-size: cover;
-      height: 140vh;
+      height: 185vh;
       display: flex;
       justify-content: center;
       align-items: center;

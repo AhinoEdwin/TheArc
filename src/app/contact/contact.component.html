@@ -1,18 +1,18 @@
 <div class="main">
 <div class="container">
-  <div class="contactfrom" style="color: white;"><h2>Contact Form</h2></div>
+  <div class="contactfrom" style="color: white;"><h2>Registration Form</h2></div>
   <form [formGroup]="myForm" class="needs-validation" novalidate>
     <div class="form-group row p-2">
-      <label for="firstName" class="col-sm-2 col-md-3 col-form-label fontlabel">First Name</label>
+      <label for="firstName" class="col-sm-2 col-md-3 col-form-label fontlabel">Name</label>
       <div class="col-sm-10 col-md-9">
-        <input type="text" id="firstName" class="form-control form-control-lg" placeholder="First Name" formControlName="firstName" [class.is-invalid]="myForm.controls['firstName'].invalid && (myForm.controls['firstName'].dirty || myForm.controls['firstName'].touched)" required>
+        <input type="text" id="firstName" class="form-control form-control-lg" placeholder="Name" formControlName="firstName" [class.is-invalid]="myForm.controls['firstName'].invalid && (myForm.controls['firstName'].dirty || myForm.controls['firstName'].touched)" required>
         <div class="invalid-feedback" *ngIf="myForm.controls['firstName'].invalid && (myForm.controls['firstName'].dirty || myForm.controls['firstName'].touched)">
           First Name is required.
         </div>
       </div>
     </div>
 
-    <div class="form-group row p-2">
+    <!-- <div class="form-group row p-2">
       <label for="lastName" class="col-sm-2 col-md-3 col-form-label fontlabel">Last Name</label>
       <div class="col-sm-10 col-md-9">
         <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Last Name" formControlName="lastName" [class.is-invalid]="myForm.controls['lastName'].invalid && (myForm.controls['lastName'].dirty || myForm.controls['lastName'].touched)" required>
@@ -20,7 +20,7 @@
           Last Name is required.
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="form-group row p-2">
       <label for="mobileNumber" class="col-sm-2 col-md-3 col-form-label fontlabel">Mobile</label>
@@ -43,7 +43,22 @@
     </div>
 
     <div class="form-group row p-2">
-      <label for="message" class="col-sm-2 col-md-3 col-form-label fontlabel">Message</label>
+      <label for="" class="col-sm-2 col-md-3 col-form-label fontlabel">Location</label>
+      <div class="col-sm-10 col-md-9">
+        <select class="form-control form-control-lg" placeholder="Location" formControlName="location" [class.is-invalid]="myForm.controls['location'].invalid && (myForm.controls['location'].dirty || myForm.controls['location'].touched)">
+        <!-- formControlName="location" [class.is-invalid]="myForm.controls['location'].invalid && (myForm.controls['location'].dirty || myForm.controls['location'].touched)" required -->
+          <!-- <option value="123">12345</option>
+          <option value="gfvhb">2345t6y</option>
+          <option value="1jnk23">3456yh</option>
+          <option value="jn">r45tgvhbh</option>  -->
+          <option *ngFor="let data of States" [value]="data">{{data}}</option> 
+        </select>
+      </div>
+
+    </div>
+
+    <div class="form-group row p-2">
+      <label for="message" class="col-sm-2 col-md-3 col-form-label fontlabel">About You</label>
       <div class="col-sm-10 col-md-9">
         <textarea type="text" id="message" class="form-control form-control-lg" placeholder="Type your message here" formControlName="message" [class.is-invalid]="myForm.controls['message'].invalid && (myForm.controls['message'].dirty || myForm.controls['message'].touched)" required style="height: 200px;"></textarea>
         <!-- <div class="invalid-feedback" *ngIf="myForm.controls['message'].invalid && (myForm.controls['message'].dirty || myForm.controls['message'].touched)">
@@ -52,9 +67,27 @@
       </div>
     </div>
 
+    <div class="form-group row p-2">
+      <label for="photo" class="col-sm-2 col-md-3 col-form-label fontlabel">Upload Picture</label>
+      <div class="col-sm-10 col-md-9" style="background: none;">
+        <input type="file" id="photo" (change)="getFile($event)" class="form-control form-control-lg" accept="image/*" formControlName="photo" [class.is-invalid]="myForm.controls['photo'].invalid && (myForm.controls['photo'].dirty || myForm.controls['photo'].touched)" required>
+        <div class="invalid-feedback" *ngIf="myForm.controls['photo'].invalid && (myForm.controls['photo'].dirty || myForm.controls['photo'].touched)">
+          photo is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row p-2">
+      <label for="youtube" class="col-sm-2 col-md-3 col-form-label fontlabel">Youtube Link</label>
+      <div class="col-sm-10 col-md-9">
+        <input type="text" id="youtube" class="form-control form-control-lg" placeholder="Youtube Link" formControlName="youtube" [class.is-invalid]="myForm.controls['youtube'].invalid && (myForm.controls['youtube'].dirty || myForm.controls['youtube'].touched)">  
+      </div>
+    </div>
+
+
     <div class="form-group row  p-2" style="display: flex;justify-content: center;">
       <div class="col-sm-4">
-        <button [disabled]="!myForm.controls['email']&&!myForm.controls['mobileNumber'].invalid&&!myForm.controls['lastName'].invalid&&!myForm.controls['firstName'].invalid " type="submit" class="btn btn-primary btn-lg submit" (click)="submit()" style="background: #1a4774;">Submit</button>
+        <button [disabled]="!myForm.controls['email']&&!myForm.controls['mobileNumber'].invalid&&!myForm.controls['firstName'].invalid " type="submit" class="btn btn-primary btn-lg submit" (click)="submit()" style="background: #1a4774;">Submit</button>
       </div>
     </div>
   </form>

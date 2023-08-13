@@ -160,6 +160,10 @@ cursor: pointer;
     .contact-message{
       width: 20vw;
     }
+    .navbar-nav{
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .navbar-nav {
@@ -261,6 +265,7 @@ cursor: pointer;
 
   .content1,
   .content2 {
+    margin-top: 2%;
     text-align: center;
   }
 
@@ -270,6 +275,18 @@ cursor: pointer;
   h2 {
     font-size: 16px;
     margin-bottom: 8px;
+  }
+  .contact-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-container{
+font-size: 12px;
+  }
+  .trademark{
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -299,6 +316,9 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
   }
+  .top-icons a{
+    padding-left: 5%;
+  }
 
   .bottom {
     display: flex;
@@ -322,5 +342,10 @@ cursor: pointer;
   h2 {
     font-size: 16px;
     margin-bottom: 8px;
+  }
+  .trademark{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
   }
 }

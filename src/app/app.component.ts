@@ -36,5 +36,5 @@ export class AppComponent {
     // { name: 'WhatsApp', url: 'https://web.whatsapp.com/', imagePath: 'assets/whatsapp.jpeg',message:"+91 9234578960" }
 
   ]
-  public location =[    { name: 'Location', url: 'https://g.co/kgs/AqEs3Y', imagePath: 'assets/location.jpg',message:"12th Floor, Tower CS7, Supertech Capetown, Plot No - GH01/A, Sector-74, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201 305" }]
+  public location =[    { name: 'Location', url: 'https://g.co/kgs/AqEs3Y', imagePath: 'assets/location.png',message:"12th Floor, Tower CS7, Supertech Capetown, Plot No - GH01/A, Sector-74, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201 305" }]
 }
